@@ -32,7 +32,7 @@ class HTML:
         text_file.write(self.html)
     with open("".join(["bin/", settings.file_name]), "w") as text_file:
       text_file.write(f'''
-import webview, os
+import webview, os, sys
 class Api:
   def openChild(self, url):
     window.hide()
@@ -41,7 +41,7 @@ class Api:
     window.destroy()
     os._exit(0)
   def reload(self):
-    os.startfile(__file__)
+    os.startfile(sys.argv[0])
     self.die()
 html = r\'\'\'
 ''')
