@@ -11,10 +11,9 @@ Python Glide is a template/framework/setup used to compile HTML, CSS & Javascrip
 - Windows
 
 ### Features
-- Add any kind of CSS or Javascript library
-- Build your HTML into a pywebview .pyw file
-- Compile your .pyw into a .exe
+- Compile any HTML, CSS and Javascript into a native app.
 <br><br>
+
 ### Includes:
 | Resource            | Type |  |
 |----------------------------|--------|-----------------------------------------------------------------|
