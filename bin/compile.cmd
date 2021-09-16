@@ -1,1 +1,0 @@
-pyinstaller app.pyw --onefile --icon glide.ico
