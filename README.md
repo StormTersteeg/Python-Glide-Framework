@@ -45,4 +45,5 @@ Phase 2
 <br>
 
 ## Advanced
-Resources contains `wrapper.pyw`, this is the pywebview preset file that is used to wrap your HTML. You can add custom functions to the Javascript API, see this: https://pywebview.flowrl.com/examples/js_api.html. This wrapper also already contains all the existing events that you can use.
+Resources contains `wrapper.pyw`, this is the pywebview preset file that is used to wrap your HTML. You can add custom functions to the Javascript API, see this: https://pywebview.flowrl.com/examples/js_api.html. This wrapper also already contains all the existing events that you can use.<br><br>
+DONT remove `#!FLAG-HTML` from the wrapper, as it is used by the builder to identify where to inject the HTML.
