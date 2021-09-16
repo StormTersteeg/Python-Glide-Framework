@@ -27,32 +27,40 @@ class HTML:
     return self.html
 
   def export(self):
+    # Export to html file
     if settings.export_html:
-      with open("bin/app.html", "w") as text_file:
-        text_file.write(self.html)
-    with open("".join(["bin/", settings.file_name]), "w") as text_file:
-      text_file.write(f'''
-import webview, os, sys
-class Api:
-  def openChild(self, url):
-    window.hide()
-    child = webview.create_window(url, url, width=1500, height=850)
-  def die(self):
-    window.destroy()
-    os._exit(0)
-  def reload(self):
-    os.startfile(sys.argv[0])
-    self.die()
-html = r\'\'\'
-''')
-      text_file.write(self.html)
-      text_file.write(f'''
-\'\'\'
-api = Api()
-window = webview.create_window("{settings.app_name}", html=html, js_api=api)
-webview.start(gui='cef')
-''')
-    if settings.debug: print("  [+] Body exported")
+      with open("bin/app.html", "w") as html_export:
+        html_export.write(self.html)
+    
+    # Get wrapper code
+    with open('resources/wrapper.pyw','r') as wrap_source:
+      wrapper = wrap_source.read()
+    
+    # Inject settings into wrapper code
+    if settings.debug: print("")
+    settings_to_inject = [
+      [r"{settings.app_name}", str(settings.app_name)],
+      [r"{settings.app_proportions[0]}", str(settings.app_proportions[0])],
+      [r"{settings.app_proportions[1]}", str(settings.app_proportions[1])],
+      [r"{settings.app_confirm_close}", str(settings.app_confirm_close)],
+      [r"{settings.app_allow_inspect}", str(settings.app_allow_inspect)],
+      [r"{settings.app_frameless}", str(settings.app_frameless)],
+      [r"{settings.app_fullscreen}", str(settings.app_fullscreen)],
+      [r"{settings.app_web_engine}", str(settings.app_web_engine)]
+    ]
+    for string,setting in settings_to_inject:
+      wrapper = wrapper.replace(string, setting)
+      if settings.debug: print("".join(["  [i] ", string.replace("{","").replace("}", ""), ": ", setting]))
+
+    # Inject resources into wrapper code
+    wrapper = wrapper.replace("#!FLAG-HTML", "".join(["html = r'''", self.html, "'''"]))
+    if settings.debug: print("  [i] Injected resources")
+
+    # Export result
+    with open("".join(["bin/", settings.file_name]), "w") as pywebview_export:
+      pywebview_export.write(wrapper)
+    
+    if settings.debug: print("\n  [+] Exported")
 
 if __name__ == '__main__':
   html = HTML()
