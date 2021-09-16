@@ -41,3 +41,8 @@ Phase 1 (repeat until app is done)
 Phase 2
 - Compile the `.pyw` into a `.exe` by running compile.cmd
 - Find your `.exe` in `bin/dist/`
+
+<br>
+
+## Advanced
+Resources contains `wrapper.pyw`, this is the pywebview preset file that is used to wrap your HTML. You can add custom functions to the Javascript API, see this: https://pywebview.flowrl.com/examples/js_api.html. This wrapper also already contains all the existing events that you can use.
