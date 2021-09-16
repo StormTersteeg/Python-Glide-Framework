@@ -2,7 +2,7 @@
 
 ![Alt text](https://one.dontdalon.com/screenshot.png)<br>
 Python Glide is a template/framework/setup used to compile HTML, CSS & Javascript into a native app.
-<br>(by using [pywebview](https://pywebview.flowrl.com/))<br><br>
+<br>(by using [pywebview](https://pywebview.flowrl.com/) and [pyinstaller](https://www.pyinstaller.org/))<br><br>
 
 ### Dependencies
 - Python 3
