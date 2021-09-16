@@ -12,7 +12,7 @@ Python Glide is a template/framework/setup used to compile HTML, CSS & Javascrip
 
 ### Features
 - Compile any HTML, CSS and Javascript into a native app.
-- Connect your HTML UI to the Python backend by editing `resources/wrapper.py`
+- Connect your HTML UI to the Python backend with Javascript (by editing `resources/wrapper.py`)
 <br><br>
 
 ### Includes:
