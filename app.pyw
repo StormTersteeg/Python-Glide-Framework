@@ -6,7 +6,7 @@ class App:
     self.name = "Glide"
     self.visible = True
     self.doPrints = False
-    if self.doPrints: print("\n  Glide - Ready\n")
+    if self.doPrints: print(f"\n  {self.name} - Ready\n")
 
 class HTML:
   def __init__(self):
@@ -34,6 +34,37 @@ class HTML:
   def export(self):
     with open("glide/export.html", "w") as text_file:
       text_file.write(self.html)
+    with open("bin/app.pyw", "w") as text_file:
+      text_file.write(f'''
+import webview
+import os
+class App:
+  def __init__(self):
+    self.name = "{app.name}"
+    self.visible = True
+    self.doPrints = {app.doPrints}
+    if self.doPrints: print(f"\\n  {{self.name}} - Ready\\n")
+class Api:
+  def openChild(self, url):
+    window.hide()
+    child = webview.create_window(url, url, width=1500, height=850)
+  def die(self):
+    import os
+    os._exit(0)
+  def reload(self):
+    os.startfile("app.exe")
+    self.die()
+app = App()
+html = r\'\'\'
+      ''')
+      text_file.write(self.html.replace("\n", "").replace("\t", "").replace("\r", ""))
+      text_file.write('''
+\'\'\'
+if __name__ == '__main__':
+  api = Api()
+  window = webview.create_window(app.name, html=html, js_api=api)
+  webview.start(gui='cef')
+      ''')
     if app.doPrints: print("  [+] Body exported")
 
 class Api:
