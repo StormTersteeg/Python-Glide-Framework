@@ -38,9 +38,10 @@ class Api:
     window.hide()
     child = webview.create_window(url, url, width=1500, height=850)
   def die(self):
+    window.destroy()
     os._exit(0)
   def reload(self):
-    os.startfile("app.exe")
+    os.startfile(__file__)
     self.die()
 html = r\'\'\'
 ''')
@@ -62,4 +63,3 @@ if __name__ == '__main__':
   if settings.preview:
     os.chdir("bin")
     os.startfile(settings.file_name)
-  input()
