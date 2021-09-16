@@ -1,4 +1,5 @@
 import webview
+import htmlmin
 import os
 
 class App:
@@ -32,7 +33,7 @@ class HTML:
     return self.html
 
   def export(self):
-    with open("glide/export.html", "w") as text_file:
+    with open("bin/app.html", "w") as text_file:
       text_file.write(self.html)
     with open("bin/app.pyw", "w") as text_file:
       text_file.write(f'''
@@ -56,15 +57,15 @@ class Api:
     self.die()
 app = App()
 html = r\'\'\'
-      ''')
-      text_file.write(self.html.replace("\n", "").replace("\t", "").replace("\r", ""))
+''')
+      text_file.write(self.html)
       text_file.write('''
 \'\'\'
 if __name__ == '__main__':
   api = Api()
   window = webview.create_window(app.name, html=html, js_api=api)
   webview.start(gui='cef')
-      ''')
+''')
     if app.doPrints: print("  [+] Body exported")
 
 class Api:
