@@ -1,5 +1,4 @@
 import webview
-import htmlmin
 import os
 
 class App:
@@ -78,22 +77,22 @@ class Api:
     os._exit(0)
 
   def reload(self):
-    os.startfile("app.pyw")
+    os.startfile("build.pyw")
     self.die()
 
 app = App()
 
 html = HTML()
-html.resourceImport("glide/assets/roboto/roboto.min.css")
-html.resourceImport("glide/assets/material-icons/material-icons.min.css")
-html.resourceImport("glide/assets/material-4.1.1/material.min.css")
-html.resourceImport("glide/assets/custom/custom.css")
-html.resourceImport("glide/index.html")
-html.resourceImport("glide/assets/jquery-3.5.1/jquery.slim.min.js")
-html.resourceImport("glide/assets/popper-1.14.3/popper.min.js")
-html.resourceImport("glide/assets/bootstrap-4.1.1/bootstrap.min.js")
-html.resourceImport("glide/assets/material-4.1.1/material.min.js")
-html.resourceImport("glide/assets/custom/custom.js")
+html.resourceImport("resources/assets/roboto/roboto.min.css")
+html.resourceImport("resources/assets/material-icons/material-icons.min.css")
+html.resourceImport("resources/assets/material-4.1.1/material.min.css")
+html.resourceImport("resources/assets/custom/custom.css")
+html.resourceImport("resources/index.html")
+html.resourceImport("resources/assets/jquery-3.5.1/jquery.slim.min.js")
+html.resourceImport("resources/assets/popper-1.14.3/popper.min.js")
+html.resourceImport("resources/assets/bootstrap-4.1.1/bootstrap.min.js")
+html.resourceImport("resources/assets/material-4.1.1/material.min.js")
+html.resourceImport("resources/assets/custom/custom.js")
 html.export()
 
 if __name__ == '__main__':
