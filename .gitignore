@@ -1,4 +1,2 @@
 __pycache__/
-dist/
-bin/app.pyw
-bin/app.html
+bin/
