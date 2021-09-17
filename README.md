@@ -39,7 +39,7 @@ Phase 1 (repeat until app is done)
 - Build your code into a `.pyw` by running `build.py` <br><br>
 
 Phase 2
-- Compile the `.pyw` into a `.exe` by running compile.cmd
+- Compile the `.pyw` into a `.exe` by running `compile.cmd`
 - Find your `.exe` in `bin/dist/`
 
 <br>
