@@ -18,6 +18,7 @@ resources = [                           # Resources to be included
   "resources/assets/material-icons/material-icons.min.css",
   "resources/assets/material-4.1.1/material.min.css",
   "resources/assets/custom/custom.css",
+  "resources/title-bar.html",
   "resources/index.html",
   "resources/assets/jquery-3.5.1/jquery.slim.min.js",
   "resources/assets/popper-1.14.3/popper.min.js",
