@@ -6,6 +6,7 @@ Python Glide is a template/framework/setup used to compile HTML, CSS & Javascrip
 
 ### Apps written using Glide
 - [Tabbed Notes](https://github.com/StormTersteeg/tabbed-notes)
+- [BSOD](https://github.com/StormTersteeg/bsod)
 
 ### Dependencies
 - Python 3
