@@ -25,7 +25,6 @@ class Api:
 
   def close(self):
     window.destroy()
-    os._exit(0)
 
   def reload(self):
     os.startfile(sys.argv[0])
