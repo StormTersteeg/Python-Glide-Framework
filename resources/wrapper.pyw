@@ -35,9 +35,9 @@ class Api:
 
 if __name__ == '__main__':
   api = Api()
-  window = webview.create_window("{settings.app_name}", html=html, js_api=api, width={settings.app_proportions[0]}, height={settings.app_proportions[1]}, confirm_close={settings.app_confirm_close}, frameless={settings.app_frameless}, fullscreen={settings.app_fullscreen})
-  window.closed += on_closed
-  window.closing += on_closing
-  window.shown += on_shown
-  window.loaded += on_loaded
+  window = webview.create_window("{settings.app_name}", html=html, js_api=api, width={settings.app_proportions[0]}, height={settings.app_proportions[1]}, confirm_close={settings.app_confirm_close}, frameless={settings.app_frameless}, fullscreen={settings.app_fullscreen}, resizable={settings.app_resizable})
+  window.events.closed += on_closed
+  window.events.closing += on_closing
+  window.events.shown += on_shown
+  window.events.loaded += on_loaded
   webview.start(gui="{settings.app_web_engine}", debug={settings.app_allow_inspect})

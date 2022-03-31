@@ -1,6 +1,7 @@
 # App Settings ====================================================================================================
 app_name = "Glide"                      # App name, displayed in the title bar
 app_proportions = [800, 450]            # Width, Height
+app_resizable = True                    # Allow the window to be resized
 app_confirm_close = False               # Quit confirmation dialog prompt
 app_allow_inspect = False               # To open up debugging console, right click on an element and select Inspect.
 app_frameless = True                    # Create a frameless window. The window can be moved around by using the ".pywebview-drag-region" css class

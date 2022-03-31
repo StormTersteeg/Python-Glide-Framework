@@ -42,6 +42,7 @@ class HTML:
       [r"{settings.app_name}", str(settings.app_name)],
       [r"{settings.app_proportions[0]}", str(settings.app_proportions[0])],
       [r"{settings.app_proportions[1]}", str(settings.app_proportions[1])],
+      [r"{settings.app_resizable}", str(settings.app_resizable)],
       [r"{settings.app_confirm_close}", str(settings.app_confirm_close)],
       [r"{settings.app_allow_inspect}", str(settings.app_allow_inspect)],
       [r"{settings.app_frameless}", str(settings.app_frameless)],
