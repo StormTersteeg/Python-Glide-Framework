@@ -5,6 +5,7 @@ Python Glide is a template/framework/setup used to compile HTML, CSS & Javascrip
 <br>(by using [pywebview](https://pywebview.flowrl.com/) and [pyinstaller](https://www.pyinstaller.org/))<br><br>
 
 ### Apps written using Glide
+- [Timer](https://github.com/StormTersteeg/timer)
 - [NS Disruption Alert](https://github.com/StormTersteeg/NS-Disruption-Alert)
 - [PingKit](https://github.com/StormTersteeg/pingkit)
 - [Tabbed Notes](https://github.com/StormTersteeg/tabbed-notes)
