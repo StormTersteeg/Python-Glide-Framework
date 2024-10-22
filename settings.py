@@ -7,7 +7,7 @@ app_allow_inspect = False               # To open up debugging console, right cl
 app_frameless = True                    # Create a frameless window. The window can be moved around by using the ".pywebview-drag-region" css class
 app_fullscreen = False                  # Create a fullscreen window.
 app_web_engine = "edgechromium"         # https://pywebview.flowrl.com/guide/renderer.html
-app_on_top = True                       # Keep the window on top of all other windows
+app_on_top = False                      # Keep the window on top of all other windows
 
 # Builder Settings ================================================================================================
 debug = True                            # Show compilation errors
