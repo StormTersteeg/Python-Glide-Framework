@@ -47,7 +47,8 @@ class HTML:
       [r"{settings.app_allow_inspect}", str(settings.app_allow_inspect)],
       [r"{settings.app_frameless}", str(settings.app_frameless)],
       [r"{settings.app_fullscreen}", str(settings.app_fullscreen)],
-      [r"{settings.app_web_engine}", str(settings.app_web_engine)]
+      [r"{settings.app_web_engine}", str(settings.app_web_engine)],
+      [r"{settings.app_on_top}", str(settings.app_on_top)]
     ]
     for string,setting in settings_to_inject:
       wrapper = wrapper.replace(string, setting)
